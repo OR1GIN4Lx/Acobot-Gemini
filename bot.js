@@ -21,9 +21,6 @@ const client = new Client({
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
 
-// Personalità predefinita del bot
-let botPersonality = "Si chiama Aco-Chan o Aco e gli piacciono gli anime, film e videogiochi";
-
 // Database in memoria
 const botSettings = new Map();
 const conversations = new Map();

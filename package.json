@@ -1,0 +1,26 @@
+{
+  "name": "discord-gemini-bot",
+  "version": "1.0.0",
+  "description": "Bot Discord con Gemini API come ChatBot intelligente",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "node bot.js"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "gemini",
+    "chatbot"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.13.0",
+    "@google/generative-ai": "^0.1.3",
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}

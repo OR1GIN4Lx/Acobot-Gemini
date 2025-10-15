@@ -598,4 +598,28 @@ async function resetPersonality(interaction) {
   const embed = new EmbedBuilder()
     .setColor('#E74C3C')
     .setTitle('🔄 Personalità Resettata')
-    .setDescription('La personalità del 
+    .setDescription(`**Personalità del bot:**\n\n"${personality}"`)
+    .addFields(
+      { name: 'Come cambiarla?', value: 'Usa `/setpersonality` per modificarla (solo admin)' }
+    )
+    .setTimestamp();
+  
+  await interaction.reply({ embeds: [embed] });
+}
+
+async function resetPersonality(interaction) {
+  botPersonality.delete(interaction.guildId);
+
+  const embed = new EmbedBuilder()
+    .setColor('#E74C3C')
+    .setTitle('🔄 Personalità Resettata')
+    .setDescription('La personalità del bot è stata resettata a quella predefinita.')
+    .addFields(
+      { name: 'Personalità predefinita', value: 'Sei un assistente amichevole, utile e rispettoso. Rispondi in italiano.' }
+    )
+    .setTimestamp();
+  
+  await interaction.reply({ embeds: [embed] });
+}
+
+client.login(DISCORD_TOKEN);

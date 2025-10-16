@@ -19,7 +19,7 @@ const client = new Client({
 
 // Inizializza Gemini
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
 // Database in memoria
 const botSettings = new Map();

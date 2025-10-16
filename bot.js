@@ -26,6 +26,7 @@ const botSettings = new Map();
 const conversations = new Map();
 const messageStats = new Map(); // userId -> { count, lastMessage }
 const serverStats = new Map(); // guildId -> { totalMessages, users: {} }
+const botPersonality = new Map();
 
 // Registra i comandi slash
 const commands = [
